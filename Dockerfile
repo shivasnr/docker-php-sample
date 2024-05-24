@@ -16,15 +16,15 @@ RUN --mount=type=bind,source=./composer.json,target=composer.json \
 
 FROM php:8.2-apache as base
 RUN docker-php-ext-install pdo pdo_mysql
-COPY ./public /var/www/html
+COPY ./src /var/www/html
 
 FROM base as development
 COPY ./tests /var/www/html/tests
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 COPY --from=dev-deps app/vendor/ /var/www/html/vendor
-COPY ./src /var/www/html/src
-COPY ./public/css /var/www/html/css
-COPY ./public/fonts /var/www/html/fonts
+# COPY ./src /var/www/html/src
+# COPY ./public/css /var/www/html/css
+# COPY ./public/fonts /var/www/html/fonts
 
 FROM base as final
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
