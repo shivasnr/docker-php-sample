@@ -11,7 +11,7 @@ class Greeting
     public function sayWeAreComing()
     {
         $weAreComingText = <<<EOF
-                        We are preparing something new. <br> <span>Stay tuned!</span
+                        Hey folks!
                         EOF;
         return $weAreComingText;
     }

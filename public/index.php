@@ -19,17 +19,6 @@
 		<![endif]-->
 
 	</head>
-	<style type="text/css">
-		body{
-			background: -webkit-radial-gradient(circle, #39323e, #262029);
-		}
-		.center-aligned{
-			color:#fff;
-			text-align: center;
-			padding-top: 180px;
-		}
-
-	</style>
 
 	<body>
         <?php
@@ -43,9 +32,33 @@
 		<div class="site-content">
 			<main class="main-content">
 				<div class="container shrinked">
-					<h1 class="section-title center-aligned"><?php echo $greeting->sayWeAreComing(); ?></h1>
+					<h3 class="section-title center-aligned"><span><?php echo $greeting->sayWeAreComing(); ?></span></h3>
+					<h1 class="section-title center-aligned">
+						We are preparing something new. <br/><br/>
+						<span>Stay tuned!</span>
+					</h1>
+					<p> Quote of the day</p>
+					<p>“When the winds of change blow, some people build walls and others build windmills.“
+						<br>
+						Unknown- Ancient chinese provert
+					</p>
 				</div>	<!-- .container -->
 			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container shrinked">
+					<i class="fa-solid fa-recycle"></i>
+					<div class="social-links">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div> <!-- .social-links -->
+
+					<div class="colophon">Copyright 2024 Khetbari</div>
+
+				</div>	<!-- .container -->
+			</footer> <!-- .site-footer -->
 		</div>
 		
 	</body>

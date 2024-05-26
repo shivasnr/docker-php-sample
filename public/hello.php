@@ -33,7 +33,7 @@
 		<div class="site-content">
 			<main class="main-content">
 				<div class="container shrinked">
-					<h1 class="section-title center-aligned"><?php echo $greeting->sayWeAreComing(); ?></h1>
+					<h1 class="section-title center-aligned"><span>Hello from public</span><?php echo $greeting->sayWeAreComing(); ?></h1>
 				</div>	<!-- .container -->
 			</main> <!-- .main-content -->
 		</div>
