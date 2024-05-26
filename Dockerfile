@@ -9,7 +9,7 @@ RUN --mount=type=bind,source=./composer.json,target=composer.json \
 
 FROM composer:lts as dev-deps
 WORKDIR /app
-COPY ./src /var/www/html/src
+#COPY ./src /var/www/html/src
 RUN --mount=type=bind,source=./composer.json,target=composer.json \
     --mount=type=bind,source=./composer.lock,target=composer.lock \
     --mount=type=cache,target=/tmp/cache \
