@@ -23,8 +23,8 @@
 
 	<body>
         <?php
-        require __DIR__.'/vendor/autoload.php';
-        $greeting = new \App\Greeting();
+        // require __DIR__.'/vendor/autoload.php';
+        // $greeting = new \App\Greeting();
         
         // $log = new Monolog\Logger('name');
         // $log->pushHandler(new Monolog\Handler\StreamHandler('app.log', Monolog\Logger::WARNING));
@@ -33,7 +33,7 @@
 		<div class="site-content">
 			<main class="main-content">
 				<div class="container shrinked">
-					<h1 class="section-title center-aligned"><span>Hello from public</span><?php echo $greeting->sayWeAreComing(); ?></h1>
+					<h1 class="section-title center-aligned"><span>Hello from public</span><?php //echo $greeting->sayWeAreComing(); ?></h1>
 				</div>	<!-- .container -->
 			</main> <!-- .main-content -->
 		</div>
