@@ -5,8 +5,7 @@ WORKDIR /app
 RUN --mount=type=bind,source=./composer.json,target=composer.json \
     --mount=type=bind,source=./composer.lock,target=composer.lock \
     --mount=type=cache,target=/tmp/cache \
-    composer install --no-dev --no-interaction \
-    composer dump-autoload
+    composer install --no-dev --no-interaction
 
 FROM composer:lts as dev-deps
 WORKDIR /app
@@ -14,8 +13,7 @@ COPY ./src /var/www/html/src
 RUN --mount=type=bind,source=./composer.json,target=composer.json \
     --mount=type=bind,source=./composer.lock,target=composer.lock \
     --mount=type=cache,target=/tmp/cache \
-    composer install --no-interaction \
-    composer dump-autoload
+    composer install --no-interaction
 
 FROM php:8.2-apache as base
 RUN docker-php-ext-install pdo pdo_mysql
