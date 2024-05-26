@@ -19,18 +19,6 @@
 		<![endif]-->
 
 	</head>
-	<style type="text/css">
-		body{
-			background: -webkit-radial-gradient(circle, #39323e, #262029);
-		}
-		.center-aligned{
-			color:#fff;
-			text-align: center;
-			padding-top: 180px;
-		}
-
-	</style>
-
 	<body>
         <?php
         require __DIR__.'/vendor/autoload.php';
