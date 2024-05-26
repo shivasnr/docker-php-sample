@@ -23,6 +23,7 @@ FROM base as development
 COPY ./tests /var/www/html/tests
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 COPY --from=dev-deps app/vendor/ /var/www/html/vendor
+COPY --from=dev-deps app/src/ /var/www/html/src
 
 # COPY ./public/css /var/www/html/css
 # COPY ./public/fonts /var/www/html/fonts
